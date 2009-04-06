@@ -37,7 +37,13 @@ END
 begin
   require 'echoe'
  
-  Echoe.new('compass', open('VERSION').read) do |p|
+  version = if File.exists?("EDGE_VERSION")
+    open('EDGE_VERSION').read.strip
+  else
+    open('VERSION').read.strip
+  end
+
+  Echoe.new('compass', version) do |p|
     # p.rubyforge_name = 'github'
     p.summary = "Sass-Based CSS Meta-Framework."
     p.description = "Sass-Based CSS Meta-Framework. Semantic, Maintainable CSS."
