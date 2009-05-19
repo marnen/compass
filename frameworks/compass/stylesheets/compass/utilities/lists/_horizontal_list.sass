@@ -4,10 +4,15 @@
 
 // A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
 // This is not an inline list.
-=horizontal-list(!padding = 4px)
+// If !multilevel is not "yes", then this mixin will only apply at the first level.  This m\
+akes the mixin suitable for dropdown menubars implemented as nested lists.
+=horizontal-list(!padding = 4px, !multilevel = "yes")
   +reset-box-model
   +clearfix
-  li
+  !selector = "& > li"
+  @if !multilevel == "yes"
+    !selector = "li"
+  #{!selector}
     +no-bullet
     :white-space nowrap
     +float-left
