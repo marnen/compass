@@ -1,10 +1,15 @@
 // Hides html text and replaces it with an image.
 // If you use this on an inline element, you will
 // need to change the display to block or inline-block.
-=replace-text( !img, !x = 50%, !y = 50% )
-  :text-indent -9999em
-  :overflow    hidden
+=replace-text(!img, !width = 0px, !height = 0px)
   :background
-    :image= image_url(!img)
+    :image = image_url(!img)
     :repeat no-repeat
-    :position= !x !y
+  :text-indent -9999em
+  :vertical-align top
+  :overflow hidden
+  :height = !height
+  :width = !width
+  :min
+    :height = !height
+    :width = !width
