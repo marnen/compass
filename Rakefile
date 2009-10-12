@@ -40,10 +40,10 @@ begin
     gemspec.rubyforge_project = "compass"
     gemspec.name = "compass"
     gemspec.summary = "A Real Stylesheet Framework"
-    gemspec.email = "chris@eppsteins.net"
+    gemspec.email = "marnen@marnen.org"
     gemspec.homepage = "http://compass-style.org"
-    gemspec.description = "Compass is a Sass-based Stylesheet Framework that streamlines the creation and maintainance of CSS."
-    gemspec.authors = ["Chris Eppstein"]
+    gemspec.description = "Compass is a Sass-based Stylesheet Framework that streamlines the creation and maintainance of CSS. This is Marnen Laibow-Koser's fork."
+    gemspec.authors = ["Marnen Laibow-Koser", "Chris Eppstein"]
     gemspec.has_rdoc = false
     gemspec.add_dependency('haml-edge', '>= 2.1.12')
     gemspec.files = []
